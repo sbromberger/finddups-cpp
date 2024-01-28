@@ -102,7 +102,7 @@ entry_hash_map hashmap(const entry_size_map &sizemap, const Config &cfg) {
     for (const auto &f : poss_dups) {
       // std::cout << "opening " << f.path() << std::endl;
       auto const fd = open(f.path().c_str(), O_RDONLY | O_DIRECT);
-      if (fd == 0) {
+      if (fd <= 0) {
         std::cerr << "Error opening " << f << ": " << strerror(errno)
                   << "; skipping\n";
         continue;
