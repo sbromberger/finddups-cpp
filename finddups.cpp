@@ -1,5 +1,5 @@
-#include "_deps/cxxopts-src/include/cxxopts.hpp"
-#include "_deps/xxhash_cpp-src/include/xxhash.hpp"
+#include <cxxopts.hpp>
+#include <xxhash.hpp>
 #include "dehumanize.h"
 #include <algorithm>
 #include <array>
